@@ -1,0 +1,25 @@
+{
+  "name": "aws-nodejs-lambda-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --env prod",
+    "deploy": "powershell .\\createZip.ps1 && powershell .\\deploy.ps1",
+    "i": "webpack --env prod && powershell .\\createZip.ps1 && powershell .\\deploy.ps1",
+    "dev:build": "webpack --env dev",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "lambda": {
+    "name": "lambdaName"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "archiver": "^4.0.1",
+    "aws-sdk": "^2.683.0",
+    "webpack": "^4.43.0"
+  }
+}
